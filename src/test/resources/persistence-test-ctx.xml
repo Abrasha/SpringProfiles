@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Here we can declare some common beans -->
+    <!-- They will belong to the "default" profile. -->
+
+    <beans profile="dev">
+
+        <bean id="person" class="edu.softserve.Person">
+            <constructor-arg name="firstName" value="xml_dev_profile"/>
+            <constructor-arg name="lastName" value="xml_dev_profile"/>
+            <constructor-arg name="age" value="5"/>
+        </bean>
+
+    </beans>
+
+    <beans profile="prod">
+
+        <bean id="person" class="edu.softserve.Person">
+            <constructor-arg name="firstName" value="xml_prod_profile"/>
+            <constructor-arg name="lastName" value="xml_prod_profile"/>
+            <constructor-arg name="age" value="6"/>
+        </bean>
+
+    </beans>
+
+</beans>
