@@ -12,14 +12,14 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class Conf {
-
+    
     @Autowired
     Person person;
-
+    
     @Bean
     public Person person() {
         return person;
     }
-
-
+    
+    
 }
